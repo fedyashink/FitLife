@@ -14,7 +14,7 @@ try:
     if user_height > 2.5:
         raise ValueError
 
-except:
+except ValueError:
     print("Кажется, вы ввели что-то неправильно...")
     print("Убедитесь в корректности данных и попробуйте снова.")
 
