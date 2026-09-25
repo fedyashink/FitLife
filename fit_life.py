@@ -7,7 +7,7 @@ while True:
 
         if not user_name.isalpha():
             raise ValueError
-        
+
         break
     except ValueError:
         print("Имя должно содержать только буквы. Попробуйте снова.")
@@ -27,8 +27,9 @@ while True:
     try:
         user_weight = float(input("Какой у вас вес? (в кг): "))
 
-        if user_weight <= 0: 
+        if user_weight <= 0:
             raise ValueError
+
         break
     except ValueError:
         print("Вы ввели вес неверно. Попробуйте снова.")
@@ -39,7 +40,7 @@ while True:
 
         if user_height <= 0 or user_height > 2.72:
             raise ValueError
-        
+
         break
     except ValueError:
         print("Вы ввели рост неверно. Попробуйте снова.")
