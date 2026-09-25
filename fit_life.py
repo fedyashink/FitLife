@@ -1,16 +1,16 @@
+WATER_PER_KG = 30
+WATER_PER_LITER = 1000
+
 print("=" * 15, "FitLife Console Bot", "=" * 15)
 print("~" * 15, "Добро пожаловать!!!", "~" * 15)
 
 while True:
     try:
-        user_name = input("Как вас зовут?: ").capitalize()
-
-        if not user_name.isalpha():
-            raise ValueError
+        user_name = input("Как вас зовут?: ").capitalize().strip()
 
         break
     except ValueError:
-        print("Имя должно содержать только буквы. Попробуйте снова.")
+        print("Вы ввели имя неверно. Попробуйте снова.")
 
 while True:
     try:
@@ -46,8 +46,8 @@ while True:
         print("Вы ввели рост неверно. Попробуйте снова.")
 
 bmi = user_weight / (user_height ** 2)
-water_ml = user_weight * 30
-water_l = water_ml / 1000
+water_ml = user_weight * WATER_PER_KG
+water_l = water_ml / WATER_PER_LITER
 
 print("-" * 5, f"Результаты пользователя {user_name}({user_age} лет)", "-" * 5)
 
